@@ -80,7 +80,7 @@ let summ = 0;
 for(let y = 1; y <= numberN; y++) {
     if(y % 2 != 0) {
         count += 1;
-        summ += y ;
+        summ += y;
    }
 }
 const itog = summ / count;
