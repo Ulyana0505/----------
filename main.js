@@ -73,21 +73,18 @@ console.log(sum3);
 for(let x = 1; x <= 9; x++) {
     console.log('7' + ' ' + 'x' + ' ' + x + ' ' + '=' + ' ' + 7 * x);
 }
-    // 3.3 !!!!!!!!!?????????????
-//const numberN = +prompt("Enter a number: ");
-//for(let y = 1; y <= numberN; y++) {
-//    if(y % 2 != 0) {
-//       let yOdd = y;
-//
-//   }
-//    let sum = 0;
-//   sumOdd = sum + yOdd;
-//    console.log(sumOdd);
-//}
-//let Odd = 1;
-//while(Odd <= numberN && Odd % 2 != 0) {
-//    console.log(Odd);
-//}
+    // 3.3
+const numberN = +prompt("Enter an N number: ");
+let count = 0;
+let summ = 0;
+for(let y = 1; y <= numberN; y++) {
+    if(y % 2 != 0) {
+        count += 1;
+        summ += y ;
+   }
+}
+const itog = summ / count;
+console.log(itog);
 
 // HW 4
 let user = {
