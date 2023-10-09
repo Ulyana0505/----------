@@ -1,25 +1,29 @@
-//document.getElementById('input')[0].addEventListener('input', function(e) {
-//   if (this.value) {
-//       document.getElementById('b').classList.add('show');
-//    } else {
-//        document.getElementById('b').classList.remove('show');
-//   }
-//});
+// HW 7
+    // 1
+let button = document.getElementById("button");
 
+let input = document.getElementById("input");
+input.oninput = change;
 
+button.style.display = "none";
 
+function change() {
+    if(input.value.length == 0) {
+        button.style.display = "none";
+    } else {
+        button.style.display = "";
+    }
+}
 
-//$("input").on("input", function() {
-//   if ($(this).val()) {
-//       $("button").show();
-//   } else {
-//        $("button").hide();
-//    }
-//});
-//$("button").click(function() {
-//    $("input").val('');
-//    $(this).hide();
-//});
+    // 2
+function click() {
+    let p = document.createElement('p');
+    document.body.appendChild(p);
+    p.innerHTML = input.value;
+}
+button.onclick = click;
 
-//let button = document.getElementById("button");
-//button.style.display = "none";
+    // 3
+if(p > 5) {
+    p[0].remove;
+}
