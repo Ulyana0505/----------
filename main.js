@@ -159,6 +159,19 @@ let todayMin = +today.getMinutes();
 const todayAllMin = minInHours + todayMin;
 console.log("С начала сегодняшенего дня прошло: " + todayAllMin + " минут.");
     // 8.3
+let birthDate_1 = "14.10.2003";
+let birthDate_2 = "10.08.2003";
+let birthDate_1_Arr = birthDate_1.split(".");
+birthDate_1_Arr.reverse();
+let birthDate_1_New = birthDate_1_Arr.join(".");
+let birthDate_2_Arr = birthDate_2.split(".");
+birthDate_2_Arr.reverse();
+let birthDate_2_New = birthDate_2_Arr.join(".");
+if(birthDate_1_New > birthDate_2_New) {
+    console.log("Пользователь с ДР 14.10.2003 младше");
+} else {
+    console.log("Пользователь с ДР 10.08.2003 младше"); 
+}
 
 // HW 9
     // 9.1
