@@ -152,7 +152,12 @@ userDataArr.reverse();
 let day = new Date(userDataArr.join("-"));
 console.log(day.getDay());
     // 8.2
-
+let today = new Date();
+let todayHours = +today.getHours();
+let minInHours = todayHours * 60;
+let todayMin = +today.getMinutes();
+const todayAllMin = minInHours + todayMin;
+console.log("С начала сегодняшенего дня прошло: " + todayAllMin + " минут.");
     // 8.3
 
 // HW 9
