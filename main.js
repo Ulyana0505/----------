@@ -189,37 +189,27 @@ const lengthWithR = 2 * 3.14 * R;
 console.log("Длина окружности с радиусом " + R + " равна " + lengthWithR);
 const areaWithR = 3.14 * R * R;
 console.log("Площадь окружности с радиусом " + R + " равна " + areaWithR);
-    // 9.3 !!!!!!!???????????????
-const numA = +prompt('Enter "a" number: ');
-const numB = +prompt('Enter "b" number: ');
-const numC = +prompt('Enter "c" number: ');
-let quadraticEquation = (numA, numB , numC) => {
-   if(numA === 0) {
-        console.log("Не квадаратное уравнение.");
-    } else if (numA != 0 && numB === 0 && numC === 0) {
-        console.log("x = " + 0);
-    } else if (numA != 0 && numB === 0 && numC != 0) {
-        if(((-numC)/2) > 0) {
-            console.log("x1 = " + (Math.sqrt((-numC)/numA)) + "x2 = " + (-Math.sqrt((-numC)/numA)));
-        } else {
+    // 9.3
+{
+    const a = +prompt('Enter "a" number: ');
+    const b = +prompt('Enter "b" number: ');
+    const c = +prompt('Enter "c" number: ');
+    
+    const D = b*b-4*a*c;
+
+    function quadraticEquation() {
+        if(a == 0) {
+            console.log("Не квадаратное уравнение.");
+        } else if (D < 0) {
             console.log("Нет решений.");
-        }
-    } else if (numA != 0 && numB != 0 && numC === 0) {
-        console.log("x1 = " + 0 + "x2 = " + ((-numB)/numA));
-    } else if (numA != 0 && numB != 0 && numC != 0) {
-        if(Math.sqrt(numB*numB-4*numA*numC) > 0) {
-            console.log("x1 = " + (-numB + Math.sqrt(numB*numB-4*numA*numC))/(2*numA) + "x2 = " + (-numB - Math.sqrt(numB*numB-4*numA*numC))/(2*numA));
-        } else if ((Math.sqrt(numB*numB-4*numA*numC) === 0)) {
-            console.log("x = " + ((-numB)/(2*numA)))
-        } else {
-            console.log("Нет решений.")
+        } else if (D > 0) {
+            console.log("x1 = " + (-b + Math.sqrt(D))/(2*a) + "; x2 = " + (-b - Math.sqrt(D))/(2*a));
+        } else if (D === 0) {
+            console.log("x = " + (-b)/(2*a))
         }
     }
 }
 quadraticEquation();
-// все время выдет "нет решений"
-// ax2 + bx + c === 0
-// (-b + Math.sqrt(b*b-4*a*c))/(2*a)
 
 // HW 10
     // 10.1+2+3 Как-то оно выдает иногда вметсо номера телефона дату. Хз почему. Перепроверить потом
