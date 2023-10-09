@@ -138,11 +138,7 @@ function pow(a, x) {
 }
 
 // HW 7
-    // 7.1
-
-    // 7.2
-
-    // 7.3
+    // Done in the other file (it's name HW_seven.html and HW_seven.js)
 
 // HW 8
     // 8.1
